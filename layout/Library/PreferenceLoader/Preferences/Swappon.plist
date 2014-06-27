@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>title</key>
+        <string>Swappon</string>
+        <key>entry</key>
+        <dict>
+            <key>cell</key>
+            <string>PSLinkCell</string>
+            <key>icon</key>
+            <string>Swappon.png</string>
+            <key>label</key>
+            <string>Swappon</string>
+        </dict>
+        <key>items</key>
+        <array>
+            <dict>
+                <key>cell</key>
+                <string>PSLinkListCell</string>
+                <key>defaults</key>
+                <string>jp.r-plus.Swappon</string>
+                <key>key</key>
+                <string>SwipeUp</string>
+                <key>label</key>
+                <string>SwipeUp</string>
+                <key>PostNotification</key>
+                <string>jp.r-plus.Swappon.settingschanged</string>
+                <key>default</key>
+                <string>0</string>
+                <key>detail</key>
+                <string>PSListItemsController</string>
+                <key>validValues</key>
+                <array>
+                    <string>-1</string>
+                    <string>0</string>
+                    <string>1</string>
+                    <string>2</string>
+                    <string>3</string>
+                </array>
+                <key>validTitles</key>
+                <array>
+                    <string>Do Nothing</string>
+                    <string>First App</string>
+                    <string>Second App</string>
+                    <string>Third App</string>
+                    <string>Fourth App</string>
+                </array>
+            </dict>
+            <dict>
+                <key>cell</key>
+                <string>PSLinkListCell</string>
+                <key>defaults</key>
+                <string>jp.r-plus.Swappon</string>
+                <key>key</key>
+                <string>SwipeDown</string>
+                <key>label</key>
+                <string>SwipeDown</string>
+                <key>PostNotification</key>
+                <string>jp.r-plus.Swappon.settingschanged</string>
+                <key>default</key>
+                <string>1</string>
+                <key>detail</key>
+                <string>PSListItemsController</string>
+                <key>validValues</key>
+                <array>
+                    <string>-1</string>
+                    <string>0</string>
+                    <string>1</string>
+                    <string>2</string>
+                    <string>3</string>
+                </array>
+                <key>validTitles</key>
+                <array>
+                    <string>Do Nothing</string>
+                    <string>First App</string>
+                    <string>Second App</string>
+                    <string>Third App</string>
+                    <string>Fourth App</string>
+                </array>
+            </dict>
+            <dict>
+                <key>cell</key>
+                <string>PSLinkListCell</string>
+                <key>defaults</key>
+                <string>jp.r-plus.Swappon</string>
+                <key>key</key>
+                <string>SwipeLeft</string>
+                <key>label</key>
+                <string>SwipeLeft</string>
+                <key>PostNotification</key>
+                <string>jp.r-plus.Swappon.settingschanged</string>
+                <key>default</key>
+                <string>-1</string>
+                <key>detail</key>
+                <string>PSListItemsController</string>
+                <key>validValues</key>
+                <array>
+                    <string>-1</string>
+                    <string>0</string>
+                    <string>1</string>
+                    <string>2</string>
+                    <string>3</string>
+                </array>
+                <key>validTitles</key>
+                <array>
+                    <string>Do Nothing</string>
+                    <string>First App</string>
+                    <string>Second App</string>
+                    <string>Third App</string>
+                    <string>Fourth App</string>
+                </array>
+            </dict>
+            <dict>
+                <key>cell</key>
+                <string>PSLinkListCell</string>
+                <key>defaults</key>
+                <string>jp.r-plus.Swappon</string>
+                <key>key</key>
+                <string>SwipeRight</string>
+                <key>label</key>
+                <string>SwipeRight</string>
+                <key>PostNotification</key>
+                <string>jp.r-plus.Swappon.settingschanged</string>
+                <key>default</key>
+                <string>-1</string>
+                <key>detail</key>
+                <string>PSListItemsController</string>
+                <key>validValues</key>
+                <array>
+                    <string>-1</string>
+                    <string>0</string>
+                    <string>1</string>
+                    <string>2</string>
+                    <string>3</string>
+                </array>
+                <key>validTitles</key>
+                <array>
+                    <string>Do Nothing</string>
+                    <string>First App</string>
+                    <string>Second App</string>
+                    <string>Third App</string>
+                    <string>Fourth App</string>
+                </array>
+            </dict>
+            <dict>
+                <key>cell</key>
+                <string>PSGroupCell</string>
+                <key>footerText</key>
+                <string>Author: @r_plus</string>
+            </dict>
+        </array>
+    </dict>
+</plist>

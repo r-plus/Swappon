@@ -1,0 +1,9 @@
+Package: jp.r-plus.swappon
+Name: Swappon
+Depends: mobilesubstrate, firmware (>= 7.0)
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Launch app in folder via swipe.
+Maintainer: r_plus
+Author: r_plus
+Section: Tweaks
