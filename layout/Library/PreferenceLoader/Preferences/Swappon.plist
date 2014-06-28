@@ -37,6 +37,7 @@
                     <string>1</string>
                     <string>2</string>
                     <string>3</string>
+                    <string>100</string>
                 </array>
                 <key>validTitles</key>
                 <array>
@@ -45,6 +46,7 @@
                     <string>Second App</string>
                     <string>Third App</string>
                     <string>Fourth App</string>
+                    <string>Open Folder</string>
                 </array>
             </dict>
             <dict>
@@ -69,6 +71,7 @@
                     <string>1</string>
                     <string>2</string>
                     <string>3</string>
+                    <string>100</string>
                 </array>
                 <key>validTitles</key>
                 <array>
@@ -77,6 +80,7 @@
                     <string>Second App</string>
                     <string>Third App</string>
                     <string>Fourth App</string>
+                    <string>Open Folder</string>
                 </array>
             </dict>
             <dict>
@@ -101,6 +105,7 @@
                     <string>1</string>
                     <string>2</string>
                     <string>3</string>
+                    <string>100</string>
                 </array>
                 <key>validTitles</key>
                 <array>
@@ -109,6 +114,7 @@
                     <string>Second App</string>
                     <string>Third App</string>
                     <string>Fourth App</string>
+                    <string>Open Folder</string>
                 </array>
             </dict>
             <dict>
@@ -133,6 +139,7 @@
                     <string>1</string>
                     <string>2</string>
                     <string>3</string>
+                    <string>100</string>
                 </array>
                 <key>validTitles</key>
                 <array>
@@ -141,6 +148,7 @@
                     <string>Second App</string>
                     <string>Third App</string>
                     <string>Fourth App</string>
+                    <string>Open Folder</string>
                 </array>
             </dict>
             <dict>

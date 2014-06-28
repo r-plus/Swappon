@@ -2,9 +2,18 @@
 #import <UIKit/UIGestureRecognizerSubclass.h>
 
 // interfaces {{{
+@interface SpringBoard
+- (BOOL)launchApplicationWithIdentifier:(id)arg1 suspended:(BOOL)arg2;
+@end
+
+@interface SBApplication
+@end
+
 @interface SBIcon : NSObject
 - (void)launchFromLocation:(int)location;
 - (BOOL)isFolderIcon;// iOS 4+
+- (NSString *)applicationBundleID;
+- (SBApplication *)application;
 @end
 
 @interface SBFolder : NSObject
@@ -13,14 +22,29 @@
 
 @interface SBIconView : UIView
 @property(retain, nonatomic) SBIcon *icon;// iOS 5+
+@property(assign, getter = isHighlighted) BOOL highlighted;
 @end
 
 @interface SBFolderIcon : NSObject
 - (SBFolder *)folder;
 @end
 
-@interface SBFolderIconView
+@interface SBFolderIconView : SBIconView
 - (SBFolderIcon *)folderIcon;
+@end
+
+@interface SBAppSliderController
+@end
+
+@interface SBUIController
++ (id)sharedInstance;
+- (void)appSwitcher:(SBAppSliderController *)arg1 wantsToActivateApplication:(NSString *)arg2;
+- (void)activateApplicationAnimatedFromIcon:(SBApplication *)arg1 fromLocation:(int)arg2;
+- (void)activateApplicationAnimated:(SBApplication *)application;
+@end
+
+@interface SBIconController
+- (void)openFolder:(id)arg1 animated:(_Bool)arg2;
 @end
 // }}}
 
@@ -92,12 +116,22 @@ static int swipeRightAppLocation;
     }
     if (targetAppLocation == -1)
         return;
-    SBIcon *firstIcon = [((SBFolderIconView *)gesture.view).folderIcon.folder iconAtIndexPath:[NSIndexPath indexPathForRow:targetAppLocation inSection:0]];
-    [firstIcon launchFromLocation:0];
+
+    if (targetAppLocation == 100) {
+        [[%c(SBIconController) sharedInstance] openFolder:((SBFolderIconView *)gesture.view).folderIcon.folder animated:YES];
+    } else {
+        SBIcon *targetIcon = [((SBFolderIconView *)gesture.view).folderIcon.folder iconAtIndexPath:[NSIndexPath indexPathForRow:targetAppLocation inSection:0]];
+        [targetIcon launchFromLocation:0];
+    }
+    //[[%c(SBUIController) sharedInstance] activateApplicationAnimated:[targetIcon application]];
+    //[[%c(SBUIController) sharedInstance] activateApplicationAnimatedFromIcon:[targetIcon application] fromLocation:0];
+    //[(SpringBoard *)[%c(UIApplication) sharedApplication] launchApplicationWithIdentifier:[targetIcon applicationBundleID] suspended:NO];
+    //SBUIController *c = [%c(SBUIController) sharedInstance];
+    //SBAppSliderController *a = MSHookIvar<SBAppSliderController *>(c, "_switcherController");
+    //[c appSwitcher:a wantsToActivateApplication:[targetIcon applicationBundleID]];
 }
 %end
 // }}}
-
 // LoadSettings {{{
 static void LoadSettings()
 {
